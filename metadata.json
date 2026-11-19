@@ -1,0 +1,6 @@
+{
+  "name": "冬日京都五天四夜親子旅誌",
+  "description": "2026/12/25–12/29 日本京都五天四夜兩大兩小（3歲、5歲）客製化互動行程指南，含每日大眾運輸時間軸、燒肉弘與美食地圖篩選、Chart.js 交通費用比較與行前親子打包清單。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

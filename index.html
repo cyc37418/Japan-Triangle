@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>冬日京都五天四夜親子旅誌｜2026/12/25–12/29</title>
+    <meta
+      name="description"
+      content="2026/12/25–12/29 日本京都五天四夜兩大兩小（3歲、5歲）客製化互動行程指南，含每日大眾運輸時間軸、燒肉弘與美食地圖篩選、Chart.js 交通費用比較與行前親子打包清單。"
+    />
+    <meta property="og:title" content="冬日京都五天四夜親子旅誌｜2026/12/25–12/29" />
+    <meta
+      property="og:description"
+      content="專為 2 大 2 小規劃的京都、奈良、嵐山與臨空城五天四夜互動旅誌，整合 OMO3 京都東寺住宿攻略、Google Maps 路線、美食篩選與費用試算。"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-washi text-ink antialiased selection:bg-vermilion-tint selection:text-vermilion">
+    <!-- Top Bar: Strict 3-Zone Contract (Brand — 5 Nav Links — 1 Primary Action) -->
+    <header class="sticky top-0 z-40 bg-washi/95 backdrop-blur-sm border-b border-border-washi">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-8">
+        <!-- Zone 1: Brand Wordmark -->
+        <button
+          type="button"
+          data-nav-target="overview"
+          class="font-serif text-lg sm:text-xl font-semibold tracking-tight text-ink hover:text-vermilion transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          冬日京都旅誌
+        </button>
+
+        <!-- Zone 2: Desktop Navigation Links -->
+        <nav aria-label="主導覽列" class="hidden md:flex items-center gap-7 text-sm font-medium">
+          <button
+            type="button"
+            data-nav-target="overview"
+            class="nav-link py-1 border-b-2 border-vermilion text-ink transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            行程總覽
+          </button>
+          <button
+            type="button"
+            data-nav-target="transit"
+            class="nav-link py-1 border-b-2 border-transparent text-muted hover:text-ink transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            交通住宿
+          </button>
+          <button
+            type="button"
+            data-nav-target="itinerary"
+            class="nav-link py-1 border-b-2 border-transparent text-muted hover:text-ink transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            每日行程
+          </button>
+          <button
+            type="button"
+            data-nav-target="food"
+            class="nav-link py-1 border-b-2 border-transparent text-muted hover:text-ink transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            美食地圖
+          </button>
+          <button
+            type="button"
+            data-nav-target="prep"
+            class="nav-link py-1 border-b-2 border-transparent text-muted hover:text-ink transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            行前準備
+          </button>
+        </nav>
+
+        <!-- Zone 3: Single Primary Action -->
+        <div class="flex items-center shrink-0">
+          <button
+            type="button"
+            id="header-cta-budget"
+            class="px-4 py-2 text-xs sm:text-sm font-medium text-washi bg-vermilion hover:bg-vermilion-dark rounded transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            費用試算
+          </button>
+        </div>
+      </div>
+
+      <!-- Compact Single-Row Mobile Navigation (keeps sticky header compact < 12% viewport height) -->
+      <nav
+        aria-label="行動裝置導覽列"
+        class="md:hidden border-t border-border-washi/80 px-4 h-10 flex items-center gap-5 overflow-x-auto no-scrollbar text-xs font-medium"
+      >
+        <button
+          type="button"
+          data-nav-target="overview"
+          class="nav-link-mobile py-1 border-b-2 border-vermilion text-ink whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          行程總覽
+        </button>
+        <button
+          type="button"
+          data-nav-target="transit"
+          class="nav-link-mobile py-1 border-b-2 border-transparent text-muted hover:text-ink whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          交通住宿
+        </button>
+        <button
+          type="button"
+          data-nav-target="itinerary"
+          class="nav-link-mobile py-1 border-b-2 border-transparent text-muted hover:text-ink whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          每日行程
+        </button>
+        <button
+          type="button"
+          data-nav-target="food"
+          class="nav-link-mobile py-1 border-b-2 border-transparent text-muted hover:text-ink whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          美食地圖
+        </button>
+        <button
+          type="button"
+          data-nav-target="prep"
+          class="nav-link-mobile py-1 border-b-2 border-transparent text-muted hover:text-ink whitespace-nowrap shrink-0 cursor-pointer"
+        >
+          行前準備
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Single-Page View Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <!-- 01. Overview Section -->
+      <section id="section-overview" class="section-panel space-y-12 sm:space-y-16"></section>
+
+      <!-- 02. Transit, Stay & Charts Section -->
+      <section id="section-transit" class="section-panel hidden space-y-12 sm:space-y-16"></section>
+
+      <!-- 03. Daily Itinerary Timeline Section -->
+      <section id="section-itinerary" class="section-panel hidden space-y-8 sm:space-y-10"></section>
+
+      <!-- 04. Food Map & Filter Section -->
+      <section id="section-food" class="section-panel hidden space-y-10 sm:space-y-12"></section>
+
+      <!-- 05. Pre-Trip Prep & Packing Checklist Section -->
+      <section id="section-prep" class="section-panel hidden space-y-10 sm:space-y-12"></section>
+    </main>
+
+    <!-- Quiet Editorial Footer -->
+    <footer class="border-t border-border-washi mt-16 bg-limestone/40">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-muted"
+      >
+        <div class="space-y-1">
+          <p class="font-serif text-sm font-medium text-ink">
+            冬日京都五天四夜親子旅誌 · 2026/12/25 — 12/29
+          </p>
+          <p>
+            桃園出發 CX564 · 大阪返台 CX565 · 連住 OMO3 京都東寺 by 星野集團（2 大 2 小）
+          </p>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <button
+            type="button"
+            data-nav-target="itinerary"
+            class="text-muted hover:text-vermilion transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            每日時間軸
+          </button>
+          <span aria-hidden="true">·</span>
+          <button
+            type="button"
+            data-nav-target="food"
+            class="text-muted hover:text-vermilion transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            美食地圖
+          </button>
+          <span aria-hidden="true">·</span>
+          <button
+            type="button"
+            data-nav-target="prep"
+            class="text-muted hover:text-vermilion transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+          >
+            行前打包清單
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

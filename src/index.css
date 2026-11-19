@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --color-washi: #FBF9F5;
+  --color-limestone: #F3EFE6;
+  --color-parchment: #E7E0D2;
+  --color-border-washi: #DDD4C3;
+  --color-ink: #1C1917;
+  --color-muted: #57534E;
+  --color-subtle: #78716C;
+  --color-vermilion: #9E2A2B;
+  --color-vermilion-dark: #7F1D1D;
+  --color-vermilion-tint: #F7ECEA;
+  --color-indigo-kyoto: #2B4C7E;
+  --color-matcha: #3A5A40;
+
+  --font-serif: "Noto Serif TC", "Playfair Display", Georgia, serif;
+  --font-sans: "Noto Sans TC", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-washi);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-washi);
+    color: var(--color-ink);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  button, a, input, select {
+    outline-color: var(--color-vermilion);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.section-panel {
+  animation: panelFadeIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-panel {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom hairline scrollbar for mobile horizontal tab bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hairline checkbox styling (zero SVG, pure CSS checkmark) */
+.washi-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1.5px solid #B6AA96;
+  border-radius: 3px;
+  background-color: #FBF9F5;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.washi-checkbox:hover {
+  border-color: #9E2A2B;
+}
+
+.washi-checkbox:checked {
+  background-color: #9E2A2B;
+  border-color: #9E2A2B;
+}
+
+.washi-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 9px;
+  border: solid #FBF9F5;
+  border-width: 0 1.75px 1.75px 0;
+  transform: rotate(42deg);
+}
+
+.washi-checkbox:focus-visible {
+  outline: 2px solid #9E2A2B;
+  outline-offset: 2px;
+}
